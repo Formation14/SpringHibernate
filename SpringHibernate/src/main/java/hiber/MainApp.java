@@ -49,7 +49,8 @@ public class MainApp {
       }
 
       List <User> user = userService.getUser("Ford", 150);
-      System.out.println(user);
+      user.forEach(System.out::println);
+
       context.close();
    }
 }
