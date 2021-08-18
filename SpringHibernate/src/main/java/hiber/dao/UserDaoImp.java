@@ -35,7 +35,6 @@ public class UserDaoImp implements UserDao {
         Query queryObject = session.createQuery(queryString);
         queryObject.setParameter("model", model);
         queryObject.setParameter("series", series);
-        List<User> list = queryObject.list();
-        return list;
+        return (List<User>) queryObject.list();
     }
 }
